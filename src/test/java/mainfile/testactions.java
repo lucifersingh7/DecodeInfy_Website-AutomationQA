@@ -23,7 +23,7 @@ public class testactions {
 		
 		String parentWindow = driver.getWindowHandle(); // getting the unique Id of Parent window
 		
-	    pages.homepage.instagramBtn(driver);
+	    //STEPS TO SCROLL TO AN ELEMENT 
 	    JavascriptExecutor js = (JavascriptExecutor) driver;  // scrolling down to an WebElement using JS
 	    js.executeScript("arguments[0].scrollIntoView();", pages.homepage.instagramBtn(driver));
 	    Thread.sleep(3000);
@@ -38,8 +38,12 @@ public class testactions {
 	    }
 	    
 		driver.switchTo().window(parentWindow); // switching back to Parent Window
+		
+		//SCROLLING UP ON THE PAGE
+		JavascriptExecutor up = (JavascriptExecutor) driver;
+		up.executeScript("arguments[0].scrollIntoView();",pages.homepage.viewSelectedWorkBtn(driver));
 	    
-	    Thread.sleep(2000);
+	    Thread.sleep(5000);
 		driver.quit();
 		
 	 }

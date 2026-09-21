@@ -16,5 +16,8 @@ public class homepage {
 		element = driver.findElement(By.xpath("(//i[@class='fab fa-instagram'])[1]"));
 		return element;
 	}
-	
+	public static WebElement viewSelectedWorkBtn(WebDriver driver) {
+		element = driver.findElement(By.xpath("(//a[normalize-space()='View Selected Work'])[1]"));
+		return element;
+	}
 }
